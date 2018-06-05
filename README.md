@@ -27,4 +27,3 @@ This node is part of a series of nodes designed to integrate with the Cumulocity
 Optional pagination of results is coming next: This will give users to option to have the node run continuously until all alarms are returned. This will also include the ability to add a max timeout.
 
 I also want to make it easier to have environment variables stored easily in your NodeRed flow.  Parameters like tenant name, usernames, & credentials should all be stored in one location (vs. hard-coded into each node), so that they can be changed, managed, & protected more easily.  Once I have that figured out, I'll update this node to be compatible with that.
-# node-red-contrib-c8y-get-alarms

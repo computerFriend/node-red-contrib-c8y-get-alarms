@@ -1,3 +1,4 @@
+// Require in libraries
 var request = require('request'),
 	queryString = require('query-string'),
 	utf8 = require('utf8'),
@@ -44,7 +45,6 @@ module.exports = function(RED) {
 
 				if (n.type) reqQuery.type = n.type;
 				if (n.status) reqQuery.status = n.status;
-
 				if (n.deviceId) reqQuery.source = n.deviceId;
 
 				// Stringify query obj
