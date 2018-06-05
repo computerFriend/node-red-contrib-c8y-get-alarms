@@ -36,7 +36,7 @@
 
 	<div class="form-row">
 		<input type="checkbox" id="node-input-useAuth" style="display: inline-block; width: auto; vertical-align: top;">
-		<label for="node-input-useAuth" style="width: 70%;"><span data-i18n="c8yMeasurements.basicauth"></span> Use basic authentication </label>
+		<label for="node-input-useAuth" style="width: 70%;"><span data-i18n="c8yGetAlarms.basicauth"></span> Use basic authentication </label>
 		<div style="margin-left: 20px" class="node-input-useAuth-row hide">
 			<div class="form-row">
 				<label for="node-input-user"><i class="fa fa-user"></i><span data-i18n="common.label.username"> Username</span></label>
@@ -60,7 +60,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="c8y-get-alarms">
-	<p>Provides a node fetching measurement data from cumulocity.  This work is neither finalized nor intended for public use at this time.</p>
+	<p>Provides a node fetching alarm data from cumulocity.  This work is neither finalized nor intended for public use at this time.</p>
 	<p>The tenant name must be configured in the node.</p>
 	<ul>
 		<li>Required inputs:
@@ -71,7 +71,7 @@
 			<ul>DeviceId (number) - filter by device</ul>
 			<ul>Status (string) - status of alarm (Active, Acknowledged, Cleared)</ul>
 			<ul>Type (string) - type of alarm </ul>
-			<ul>PageSize (number) - number of measurements to include per page. (Default: 25)</ul>
+			<ul>PageSize (number) - number of alarms to include per page. (Default: 25)</ul>
 		</li>
 
 	</ul>
@@ -83,7 +83,7 @@
 			<li><code>headers</code> is an object containing the response headers</li>
 		</ul>
 	</p>
-	<p>More information about the Cumulocity API can be found <a href="http://cumulocity.com/guides/reference/measurements/">here </a>.</p>
+	<p>More information about the Cumulocity API can be found <a href="http://cumulocity.com/guides/reference/alarms/">here </a>.</p>
 </script>
 
 <script type="text/javascript">
@@ -130,7 +130,7 @@
 		outputs: 1,
 		icon: "cumulocity-logo.png",
 		label: function() {
-			return this.name || "c8y Measurements";
+			return this.name || "c8y Get Alarms";
 		},
 		labelStyle: function() {
 			return this.name ? "node_label_italic" : "";

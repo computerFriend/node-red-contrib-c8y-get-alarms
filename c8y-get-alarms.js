@@ -6,7 +6,6 @@ var request = require('request'),
 // define constants
 // NOTE: not using 'const' bc we want this node to be compatible with early ES versions (<ES6)
 var	basePath = '/alarm/alarms'; // this is a constant, dependent on c8y
-	// c8yInstanceName = 'sbdconnect.io'; // TODO: store in settings.js file
 
 module.exports = function(RED) {
 
@@ -40,8 +39,11 @@ module.exports = function(RED) {
 				if (n.pageSize) {
 					reqQuery.pageSize = n.pageSize;
 				} else {
-					reqQuery.pageSize = 25; // TODO: externalize default value
+					reqQuery.pageSize = 10; // TODO: externalize default value
 				}
+
+				if (n.type) reqQuery.type = n.type;
+				if (n.status) reqQuery.status = n.status;
 
 				if (n.deviceId) reqQuery.source = n.deviceId;
 
@@ -114,7 +116,7 @@ module.exports = function(RED) {
 							node.status({
 								fill: "red",
 								shape: "ring",
-								text: body.message
+								text: JSON.parse(body).message
 							});
 						}
 

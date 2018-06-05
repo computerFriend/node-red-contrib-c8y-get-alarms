@@ -8,7 +8,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "TBD"
+		"url": "git+https://github.com/computerFriend/node-red-contrib-c8y-get-alarms.git"
 	},
 	"keywords": [
 		"cumulocity"
